@@ -1,4 +1,4 @@
-<?
+<?php
 ///////////////////////////////
 // CONFIGURE YOUR PLUSRSS
 ///////////////////////////////
@@ -83,27 +83,27 @@
 // PUMP OUT THE FEED
 //////////////////////
 ?>
-<? echo '<?xml version="1.0" encoding="UTF-8"?>'."\n" ?>
+<?php echo '<?xml version="1.0" encoding="UTF-8"?>'."\n" ?>
 <rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
   <channel>
-    <title><?= $activities -> title ?></title>
-    <link>http://plus.google.com/<?= $uid ?>/posts</link>
-    <pubDate><?= sizeof($items) ? pubDate($items[0]) : ""?></pubDate>
-    <dc:date><?= sizeof($items) ? $items[0]->published : ""?></dc:date>
-<? foreach ($items as $item) {
+    <title><?php= $activities -> title ?></title>
+    <link>http://plus.google.com/<?php= $uid ?>/posts</link>
+    <pubDate><?php= sizeof($items) ? pubDate($items[0]) : ""?></pubDate>
+    <dc:date><?php= sizeof($items) ? $items[0]->published : ""?></dc:date>
+<?php foreach ($items as $item) {
    $item_content = content($item);
  ?>
     <item>
-      <title><?= $item -> title ?>...</title>
-      <link><?= $item -> url ?></link>
-      <description><?= $item_content ?></description>
-      <pubDate><?= pubDate($item) ?></pubDate>
-      <guid><?= $item -> url ?></guid>
-      <dc:date><?= $item -> published ?></dc:date>
+      <title><?php= $item -> title ?>...</title>
+      <link><?php= $item -> url ?></link>
+      <description><?php= $item_content ?></description>
+      <pubDate><?php= pubDate($item) ?></pubDate>
+      <guid><?php= $item -> url ?></guid>
+      <dc:date><?php= $item -> published ?></dc:date>
     </item>
-<? } ?>
+<?php } ?>
   </channel>
-</rss><?
+</rss><?php
 ////////////////////////////
 // WRITE ALL THAT TO CACHE
 ////////////////////////////
