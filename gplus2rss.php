@@ -7,9 +7,9 @@ require_once 'Google/Service/Plus.php';
 date_default_timezone_set('Australia/Adelaide');
 
 // Set API key. Get your key at https://code.google.com/apis/console.
-$api_key = 'AIzaSyACgVeEh6iQsQ6Ka1w_jdBht56C2S_ODN0';
+$api_key = 'YOURAPIKEY';
 // Set ID of Plus user. That's the long number in their profile URL.
-$gplus_uid = '101636881032878340378';
+$gplus_uid = 'YOURGOOGLEUSERID';
 
 $client = new Google_Client();
 $client->setApplicationName("gplus2rss-leogaggl");
