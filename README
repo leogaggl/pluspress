@@ -1,9 +1,5 @@
-A single PHP file for Google Plus profile to RSS, with cache support.
+PHP script to convert a Google Plus profile to RSS. It uses the Google API Client (https://github.com/google/google-api-php-client) to connect to Google Plus.
 
-Instructions:
-* git clone git@github.com:mahemoff/pluspress.git on your server
-* Include your API key at the top of the file
-* Point browser to your-domain/plusrss.php
+This replaces the original script by Michael Mahemoff (https://plus.google.com/106413090159067280619/posts/8NE3cFi4cB6). The main reasons for the change were problems with IFTTT having issues with the initial script.
 
-Working example:
-http://mahemoff.com/plusrss.php
+The RSS output now validates with the W3C Feed Validator (http://validator.w3.org/feed/)
